@@ -1,0 +1,35 @@
+<div align=center>
+  <form style="width:500px;" class="form-group" [formGroup]="userUpdateFormGroup" (ngSubmit)="onUserUpdate()">
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <label for="name">Name</label>
+          <input class="form-control" style="width:400px;" id="name" formControlName="name" placeholder="John Doe"/>
+          <br/>
+          <span *ngIf="!userUpdateFormGroup.get(['name']).valid && userUpdateFormGroup.get(['name']).touched"
+                style="color:red;">
+            Please enter a name!
+          </span>
+        </li>
+        <li class="list-group-item">
+          <label for="password">Password</label>
+          <input class="form-control" style="width:400px;" id="password" type="password"
+                 formControlName="password" placeholder="••••••••••"/>
+          <br/>
+        </li>
+        <li class="list-group-item">
+          <label for="age">Age</label>
+          <input class="form-control" style="width:400px;" id="age" formControlName="age" placeholder="28"/>
+          <br/>
+        </li>
+        <li class="list-group-item">
+          <label for="occupation">Occupation</label>
+          <input class="form-control" style="width:400px;" id="occupation" formControlName="occupation"
+                 placeholder="Librarian"/>
+          <br/>
+        </li>
+      </ul>
+    </div><br/>
+    <button class="btn btn-primary" type="submit" [disabled]="!userUpdateFormGroup.valid">Update</button>
+  </form>
+</div>

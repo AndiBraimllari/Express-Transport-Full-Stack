@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="express-transport" target="1.5" />
+      <module name="express-transport-backend" target="8" />
+      <module name="express-transport-frontend" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="express-transport-backend" options="-proc:none" />
+    </option>
+  </component>
+</project>

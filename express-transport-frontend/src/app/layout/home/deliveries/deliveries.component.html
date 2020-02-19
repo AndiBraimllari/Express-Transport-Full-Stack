@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mt-2" *ngFor="let delivery of (delivery$ | async).deliveries">
+      <h2>{{delivery.name}}</h2>
+      <p> {{delivery.weight}} kg</p>
+      <p><a class="btn btn-secondary" routerLink="/delivery/{{delivery.id}}" role="button">View details &raquo;</a></p>
+      <div>
+        <hr/>
+        <ng-template #signedInButtons>
+          <div class="btn-toolbar ml-xl-8">
+            <button class="btn btn-sm btn-primary mr-2" (click)="onConcludeDelivery(delivery)">Conclude</button>
+            <button class="btn btn-sm btn-info  mr-2" routerLink="/message/{{delivery.id}}">
+              Message Support
+            </button>
+            <button class="btn btn-sm btn-info mr-2" routerLink="/track/{{delivery.id}}">Track
+            </button>
+            <button class="btn btn-sm btn-warning mr-2" (click)="onReportDelivery(delivery)"
+                    *ngIf="delivery.status != reportedStatus">Report
+            </button>
+          </div>
+        </ng-template>
+        <span *ngIf="delivery.status === 'REPORTED' else signedInButtons">Currently being reviewed.</span>
+      </div>
+    </div>
+  </div>
+</div>

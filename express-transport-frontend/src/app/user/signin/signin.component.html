@@ -1,0 +1,35 @@
+<div align=center>
+  <form style="width:500px;" class="form-group" [formGroup]="loginGroup" (ngSubmit)="onLogin()">
+    <div (click)="onFormClick()">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <label for="email">Email</label>
+          <input class="form-control" style="width:300px;" id="email" formControlName="email"
+                 placeholder="johndoe@gmail.com"/>
+          <br/>
+          <span *ngIf="!loginGroup.get(['email']).valid && loginGroup.get(['email']).touched" style="color:red;">
+            Please enter a valid e-mail!
+          </span>
+        </li>
+        <li class="list-group-item">
+          <label for="password">Password</label>
+          <input class="form-control" style="width:300px;" id="password" type="password"
+                 formControlName="password" placeholder="••••••••••"/>
+          <br/>
+        </li>
+      </ul>
+    </div>
+    <label class="mt-2" style="color: red;">{{userStatusMapping(statusMapping.getStatus('USER_STATUS'))}}</label><br/>
+    <button class="btn btn-info ml-3" [disabled]="!verificationBtn" [hidden]="!verificationBtn"
+            routerLink="/verification" type="button">Verify account
+    </button>
+    <button class="btn btn-primary ml-3" type="submit" [disabled]="!loginGroup.valid">Sign in</button>
+    <!--    <div class="custom-control custom-checkbox mt-lg-3">-->  <!-- TODO IMPLEMENT IN DEV.-->
+    <!--      <input type="checkbox" class="custom-control-input" id="same-address">-->
+    <!--      <label class="custom-control-label" for="same-address">Remember me</label>-->
+    <!--    </div>-->
+    <div class="mt-lg-4">
+      <span style="color: #7b7b7b; cursor: pointer;" routerLink="/passwordResetRequest">Forgot password</span>
+    </div>
+  </form>
+</div>

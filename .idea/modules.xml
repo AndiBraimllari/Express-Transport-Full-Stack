@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/express-transport.iml" filepath="$PROJECT_DIR$/express-transport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/express-transport-backend/express-transport-backend.iml" filepath="$PROJECT_DIR$/express-transport-backend/express-transport-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/express-transport-frontend/express-transport-frontend.iml" filepath="$PROJECT_DIR$/express-transport-frontend/express-transport-frontend.iml" />
+    </modules>
+  </component>
+</project>

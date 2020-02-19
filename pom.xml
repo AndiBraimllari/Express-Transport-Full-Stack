@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <artifactId>express-transport</artifactId>
+    <name>express-transport</name>
+    <groupId>com.transport.express</groupId>
+    <modelVersion>4.0.0</modelVersion>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>express-transport-frontend</module>
+        <module>express-transport-backend</module>
+    </modules>
+</project>

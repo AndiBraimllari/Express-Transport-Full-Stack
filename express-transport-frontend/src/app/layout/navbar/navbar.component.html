@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/home">EXPRESS TRANSPORT</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/delivery">DELIVERY</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/message">MESSAGING</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/track">TRACKING</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/users">USERS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile">PROFILE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">ABOUT US</a>
+      </li>
+    </ul>
+    <div *ngIf="userService.isLoggedIn() != undefined">
+      <span class="navbar-text" *ngIf="!userService.isLoggedIn()">
+      <button class="btn btn-primary btn-group-sm" routerLink="/signin">Sign in</button>
+      <span> | </span>
+      <button class="btn btn-secondary btn-primary" routerLink="/signup">Sign up</button>
+      </span>
+      <span class="navbar-text" *ngIf="userService.isLoggedIn()">
+      <button class="btn btn-danger" routerLink="/logout" (click)="onLogout()">Log out</button>
+      </span>
+    </div>
+    <div *ngIf="userService.isLoggedIn() === undefined">
+      <p>Loading...</p>
+    </div>
+  </div>
+</nav><br/>

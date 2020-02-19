@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "transport.stripe.secret-key",
+      "type": "java.lang.String",
+      "description": "The secret key for Stripe."
+    },
+    {
+      "name": "transport.jwt.secret-key",
+      "type": "java.lang.String",
+      "description": "The secret key for JWT."
+    },
+    {
+      "name": "transport.jwt.validity",
+      "type": "java.lang.String",
+      "description": "Default validity of a JWT token."
+    }
+  ]
+}

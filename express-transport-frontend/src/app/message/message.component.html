@@ -1,0 +1,23 @@
+<main role="main" class="container">
+  <div class="py-2 text-center">
+    <h2>Delivery Chat</h2>
+  </div>
+  <div class="jumbotron w-75" style="margin-left: 135px">
+    <span class="float-right mt-n5" style="color: #7b7b7b; font-size: 15px">{{delivery.name}} - {{delivery.id}}</span>
+    <div *ngFor="let message of messages">
+      <div><span>{{message}}</span></div>
+      <br/>
+    </div>
+    <br/><br/><br/>
+    <hr class="mb-n2">
+    <label for="message"></label>
+    <textarea class="form-control w-100 mh-100" maxlength="1000" style="height: 140px;" id="message"
+              [(ngModel)]="message" (keydown.enter)="sendMessage();false"></textarea>
+    <br/>
+    <i-feather name="file" class="float-left" style="cursor: pointer"></i-feather>
+    <i-feather name="image" class="ml-3 float-left" style="cursor: pointer"></i-feather>
+    <i-feather name="mic" class="ml-3 float-left" style="cursor: pointer"></i-feather>
+    <i-feather name="send" (click)="sendMessage()" class="float-right"
+               style="cursor: pointer"></i-feather>
+  </div>
+</main>

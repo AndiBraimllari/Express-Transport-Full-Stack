@@ -1,0 +1,136 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <i-feather name="home"></i-feather>
+              Dashboard <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i-feather name="file"></i-feather>
+              Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i-feather name="shopping-cart"></i-feather>
+              Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i-feather name="users"></i-feather>
+              Customers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i-feather name="bar-chart-2"></i-feather>
+              Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i-feather name="layers"></i-feather>
+              Integrations
+            </a>
+          </li>
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Saved reports</span>
+          <a class="d-flex align-items-center text-muted" href="#">
+            <i-feather name="plus-circle"></i-feather>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i-feather name="file-text"></i-feather>
+              Current month
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i-feather name="file-text"></i-feather>
+              Last quarter
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i-feather name="file-text"></i-feather>
+              Social engagement
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i-feather name="file-text"></i-feather>
+              Year-end sale
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button class="btn btn-sm btn-outline-secondary">Share</button>
+            <button class="btn btn-sm btn-outline-secondary">Export</button>
+          </div>
+          <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <i-feather name="calendar"></i-feather>
+            This week
+          </button>
+        </div>
+      </div>
+
+      <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 500px; width: 1485px">
+        <!-- TODO IMPROVE IN DEV.-->
+        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+      </agm-map>
+
+      <br/>
+      <h2>Delivery Checkpoints</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+          <tr>
+            <th>Time</th>
+            <th>Action</th>
+            <th>Location</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>12:32:02 26-09-2019</td>
+            <td>Ongoing</td>
+            <td>Schwabing</td>
+          </tr>
+          <tr>
+            <td>11:58:33 26-09-2019</td>
+            <td>Security Check</td>
+            <td>Laim</td>
+          </tr>
+          <tr>
+            <td>11:49:12 26-09-2019</td>
+            <td>Packaging</td>
+            <td>Gauting</td>
+          </tr>
+          <tr>
+            <td>11:43:19 26-09-2019</td>
+            <td>Picked Up</td>
+            <td>Starnberg</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>

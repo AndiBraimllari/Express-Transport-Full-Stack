@@ -1,0 +1,9 @@
+<div align="center">
+  <h3>Users:</h3><br/>
+  <ul class="list-group" style="width:500px;">
+    <li class="list-group-item" *ngFor="let user of (user$ | async).users">
+      <span>{{user.name}}, {{user.email}}, {{user.roles}}</span>
+      <button class="btn btn-sm btn-danger" style="float:right" (click)="onDeleteUser(user)">Delete</button>
+    </li>
+  </ul>
+</div>

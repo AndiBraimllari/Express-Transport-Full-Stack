@@ -1,0 +1,36 @@
+<div align=center>
+  <form style="width:500px;" class="form-group" [formGroup]="userFormGroup" (ngSubmit)="onUserCreate()">
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <label for="name">Name</label>
+          <input class="form-control" style="width:400px;" id="name" formControlName="name" placeholder="John Doe"/>
+          <span *ngIf="!userFormGroup.get(['name']).valid && userFormGroup.get(['name']).touched" style="color:red;">
+            Please enter a name!
+          </span>
+        </li>
+        <li class="list-group-item">
+          <label for="email">Email</label>
+          <input class="form-control" style="width:400px;" id="email" formControlName="email"
+                 placeholder="johndoe@gmail.com"/>
+          <span *ngIf="!userFormGroup.get(['email']).valid && userFormGroup.get(['email']).touched" style="color:red;">
+            Please enter a valid e-mail!
+          </span>
+        </li>
+        <li class="list-group-item">
+          <label for="password">Password</label>
+          <input class="form-control" style="width:400px;" id="password" type="password"
+                 formControlName="password" placeholder="••••••••••"/>
+        </li>
+        <li class="list-group-item pb-3">
+          <label for="age">Age</label>
+          <input class="form-control" style="width:400px;" id="age" formControlName="age" placeholder="28"/>
+        </li>
+      </ul>
+    </div><br/>
+    <button class="btn btn-primary" type="submit" [disabled]="!userFormGroup.valid">Create</button>
+    <br/><br/>
+    <span class="text-muted">By continuing, you are agreeing to our <a routerLink="/about">policies</a>.</span>
+  </form>
+</div>
+<br/><br/><br/><br/>

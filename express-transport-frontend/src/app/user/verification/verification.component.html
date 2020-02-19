@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="container w-50" align="center">
+  <h3 class="display-4 text-secondary">Please check your email!</h3>
+  <p>We've sent an email to {{this.userService.getDisabledUser().email}} with a code to join our team. Please verify
+    your email address so that you can finish creating your account.
+  </p>
+  <br/><br/>
+  <form class="w-75" [formGroup]="verificationGroup" (ngSubmit)="onActivateAccount()">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <label for="code">Verification code:</label>
+        <input id="code" class="form-control" style="width:300px;" formControlName="code"/><br/>
+      </li>
+      <li class="list-group-item">
+        <label for="password">Re-enter Password:</label>
+        <input id="password" class="form-control"  style="width:300px;" type="password" formControlName="password"/><br/>
+      </li>
+    </ul>
+    <br/>
+    <label
+      style="color: red;">{{verificationStatusMapping(statusMapping.getStatus('VERIFICATION_STATUS'))}}</label><br/>
+    <button class="btn btn-success">Activate account!</button>
+  </form>
+</div>
+<app-footer></app-footer>
