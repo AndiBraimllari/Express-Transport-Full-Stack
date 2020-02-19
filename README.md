@@ -5,14 +5,14 @@ interesting modules were implemented in the frontend.
 There is a basic payment system enabled by Stripe, remote database connection through MongoDB Atlas, stateless
 authentication through JWT, Google Maps for displaying location of objects, messaging through Stomp-WebSockets, reactive state management with NgRx and much more.
 
-![alt text](https://github.com/AndiBraimllari/Express-Transport-FS/blob/master/ET-Home.png)
+![alt text](https://github.com/AndiBraimllari/Express-Transport-Full-Stack/blob/master/ET-Home.png)
 
 # CONTINUOUS DEVELOPMENT
 There are a lot of features to be added in the project most of which are annotated by TODOs for DEVELOPMENT. As this is
 a Work-In-Progress the project is continually evolving. The commit available is cherry picked from a private 
 repository in GitHub.
 
-![alt text](https://github.com/AndiBraimllari/Express-Transport-FS/blob/master/ET-Tracking.png)
+![alt text](https://github.com/AndiBraimllari/Express-Transport-Full-Stack/blob/master/ET-Tracking.png)
 
 # PRODUCTION USAGE
 There are a lot of changes to be made to the code before being considering to deploy it in the real world. There is a
@@ -31,6 +31,6 @@ folder. If you want to run the Angular separately consider using:
     
 and work with the files generated inside the dist folder optimized for production.
 
-![alt text](https://github.com/AndiBraimllari/Express-Transport-FS/blob/master/ET-SignUp.png)
+![alt text](https://github.com/AndiBraimllari/Express-Transport-Full-Stack/blob/master/ET-SignUp.png)
 
-![alt text](https://github.com/AndiBraimllari/Express-Transport-FS/blob/master/ET-Messaging.png)
+![alt text](https://github.com/AndiBraimllari/Express-Transport-Full-Stack/blob/master/ET-Messaging.png)
